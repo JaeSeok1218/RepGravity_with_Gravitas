@@ -1,6 +1,6 @@
 # Data Description
 
-Since there is no available online resource to replicate [Anderson and van Wincoop(2003)](https://www.aeaweb.org/articles?id=10.1257/000282803321455214), I constructed a synthetic data with the estimates of the paper $a_{1}$ and $a_{2}$. Here I want to share the way how I counstruct each information and some statistics of the data.
+Since there is no publicly available dataset to replicate [Anderson and van Wincoop(2003)](https://www.aeaweb.org/articles?id=10.1257/000282803321455214), I construct a synthetic dataset using the paper's estimates, $a_{1}$ and $a_{2}$. Here I describe how each variable is constructed and present summary statistics of the data.
 
 ## Overall Trade network
 
@@ -10,7 +10,7 @@ Since there is no available online resource to replicate [Anderson and van Winco
 
 ### Trade flows
 
-The paper shows the estimates of $a_{1}$ and $a_{2}$ for this two-country model, $-0.79$ and $-1.65$, respectively. Given these estimates, I can solve the following market-clearing condition for $ \\{P_{i} \\}$.
+The paper reports estimates of $a_{1}$ and $a_{2}$ for the two-country model, $-0.79$ and $-1.65$, respectively. Given these estimates, I solve the following market-clearing conditions for $ \\{P_{i} \\}$.
 
 $$
 \quad P_{j}^{1-\sigma} = \sum_{i}P_{i}^{\sigma-1}\theta_{i}\exp{\\{a_{1}\ln{d_{ij}} + a_{2}(1-\delta_{ij})\\}}
