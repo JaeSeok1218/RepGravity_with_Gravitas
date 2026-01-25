@@ -1,6 +1,6 @@
 # Data Description
 
-Since there is no available online resource to replicate [Anderson and van Wincoop(2003)](https://www.aeaweb.org/articles?id=10.1257/000282803321455214), I constructed a synthetic data with the estimates of the paper $a_{1}$ and $a_{2}$. Here I want to share the way how and some statistics of the data.
+Since there is no available online resource to replicate [Anderson and van Wincoop(2003)](https://www.aeaweb.org/articles?id=10.1257/000282803321455214), I constructed a synthetic data with the estimates of the paper $a_{1}$ and $a_{2}$. Here I want to share the way how I counstruct each information and some statistics of the data.
 
 ## Overall Trade network
 
@@ -37,7 +37,7 @@ x = x .* noise;
 
 ### Distance
 
-In order to construct distance information, following the paper, I ask _Claude_ to point approximated longitude and latitude of each state and province and calculate the Great circle distance using the longitude and latitude of regions for different regions.
+To construct distance measures, I follow the paper and obtain approximate longitude and latitude coordinates for each state and province using Claude. I then calculate great-circle distances between regions based on these coordinates.
 
 ```matlab
 haversine = @(lat1, lon1, lat2, lon2) 2 * 6371 * asin(sqrt(...
@@ -50,7 +50,7 @@ haversine = @(lat1, lon1, lat2, lon2) 2 * 6371 * asin(sqrt(...
 
 ### GDP
 
-Because the purpose of this practice is to learn from the paper, I also approximately construct each region's GDP. 
+Because the purpose of this practice is to learn from the paper, I also approximately match each region's GDP and as well as the GDP of both countries.
 
 <p align="center">
 <img src="images/Table_GDP.png" alt="Figure 1: GDP and Trade Network" width="400">
