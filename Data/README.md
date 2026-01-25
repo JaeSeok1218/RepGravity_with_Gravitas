@@ -37,7 +37,7 @@ haversine = @(lat1, lon1, lat2, lon2) 2 * 6371 * asin(sqrt(...
     cos(lat1*pi/180) * cos(lat2*pi/180) * sin((lon2-lon1)*pi/180/2)^2)) / 1000;
 ```
 
-<img src="images/Table_Dist.png" alt="Figure 1: GDP and Trade Network" width="230">
+<img src="images/Table_Dist.png" alt="Figure 1: GDP and Trade Network" width="250">
 
 ### GDP
 
