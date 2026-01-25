@@ -1,6 +1,6 @@
 # Gravity with Gravitas: A Solution to the Border Puzzle
-[Anderson and van Wincoop(2003)](https://www.aeaweb.org/articles?id=10.1257/000282803321455214) builds a seminal foundation of the gravity equation in quantitative international trade literature.
-Here I introduce the paper briefly and replicate the paper with **synthetic data**. Again, the data package I use is created based on the paper's estimates.
+[Anderson and van Wincoop(2003)](https://www.aeaweb.org/articles?id=10.1257/000282803321455214) builds a seminal foundation for the gravity equation in quantitative international trade literature.
+Here, I introduce the paper briefly and replicate its two-country model results using **synthetic data**. The data package I use is constructed based on the paper's estimates $a_{1}$ and $a_{2}$.
 
 
 ## Brief Introduction
