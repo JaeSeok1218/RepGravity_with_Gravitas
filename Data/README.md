@@ -29,7 +29,11 @@ noise = exp(0.05 * randn(n_total, n_total));
 x = x .* noise;
 ```
 
-<img src="images/Table_Trade.png" alt="Figure 1: GDP and Trade Network" width="300">
+<p align="center">
+  <img src="images/Table_Trade.png"
+       alt="Figure 1: GDP and Trade Network"
+       width="300">
+</p>
 
 ### Distance
 
@@ -40,11 +44,14 @@ haversine = @(lat1, lon1, lat2, lon2) 2 * 6371 * asin(sqrt(...
     sin((lat2-lat1)*pi/180/2)^2 + ...
     cos(lat1*pi/180) * cos(lat2*pi/180) * sin((lon2-lon1)*pi/180/2)^2)) / 1000;
 ```
-
+<p align="center">
 <img src="images/Table_Dist.png" alt="Figure 1: GDP and Trade Network" width="250">
+</p>
 
 ### GDP
 
 Because the purpose of this practice is to learn from the paper, I also approximately construct each region's GDP. 
 
+<p align="center">
 <img src="images/Table_GDP.png" alt="Figure 1: GDP and Trade Network" width="400">
+</p>
