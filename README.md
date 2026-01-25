@@ -2,7 +2,7 @@
 [Anderson and van Wincoop(2003)](https://www.aeaweb.org/articles?id=10.1257/000282803321455214) builds a seminal foundation for the gravity equation in quantitative international trade literature.
 Here, I introduce the paper briefly and replicate its two-country model results using **synthetic data**. The data package I use is constructed based on the paper's estimates $a_{1}$ and $a_{2}$.
 
-- Data is availabe with description [here](https://github.com/JaeSeok1218/Gravity_with_Gravitas/tree/main/Data).
+- Data is available with description [here](https://github.com/JaeSeok1218/Gravity_with_Gravitas/tree/main/Data).
 - Replication code is provided [here](https://github.com/JaeSeok1218/Gravity_with_Gravitas/tree/main/Estimation).
 
 
