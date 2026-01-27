@@ -7,7 +7,7 @@ params0 = [-0.8, -1.7];  % Initial guess [a1, a2]
 lb = [-1.6, -3.4];       % Lower bounds
 ub = [0, 0];             % Upper bounds
 ```
->Note: from the estimates of the paper, I set the bound roughly. Again, since this practice is for getting used to the method the paper uses, one cannot learn important from the detail numbers.
+>**Note**: Based on the estimates from the paper, I set the bounds roughly. Since this exercise is intended to getting the hang of the methodology used in the paper, one cannot learn important things from the specific numbers.
 
 
 
