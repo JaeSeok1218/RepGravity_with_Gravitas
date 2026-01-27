@@ -50,53 +50,20 @@ $$
 
 where $a_{1} = (1-\sigma)\rho$. Moreover, since $b_{ij}$ represents tariff-type barriers, the paper further assumes $b_{ij} = b^{1-\delta_{ij}}$, where $b-1$ constitutes tariff-equivalent of the Canada-US border, which yields the equation (3). Using the non-linear least squares, the paper estimates
 
-<details>
-<summary><strong>Estimation problem</strong></summary>
-
+***
 $$
-\min_{k,a_{1},a_{2}} \sum_{i}\sum_{j\neq i}
-\left[
-\ln z_{ij}
-- k
-- a_{1}\ln d_{ij}
-- a_{2}(1-\delta_{ij})
-+ \ln P_{i}^{1-\sigma}
-+ \ln P_{j}^{1-\sigma}
-\right]^2
+\min_{k,a_{1},a_{2}} \sum_{i}\sum_{j\neq i} \left[\ln{z_{ij}} - k - a_{1}\ln{d_{ij}} - a_{2}(1-\delta_{ij}) + \ln{P_{i}^{1-\sigma}} + \ln{P_{j}^{1-\sigma}}\right]^{2}
 $$
 
 subject to
 
 $$
-P_{j}^{1-\sigma}
-=
-\sum_{i}
-P_{i}^{\sigma-1}
-\theta_{i}
-\exp\!\left\{
-a_{1}\ln d_{ij}
-+ a_{2}(1-\delta_{ij})
-\right\}
+\quad P_{j}^{1-\sigma} = \sum_{i}P_{i}^{\sigma-1}\theta_{i}\exp{\\{a_{1}\ln{d_{ij}} + a_{2}(1-\delta_{ij})\\}}
 $$
 
-where
-$\ln z_{ij} \equiv \ln\!\left(x_{ij}/(y_i y_j)\right)$.
+where $\ln{z_{ij}} \equiv \ln{\left(x_{ij}/y_{i}y_{j}\right)}$.
 
-</details>
-
-
-> 
->$$
->\min_{k,a_{1},a_{2}} \sum_{i}\sum_{j\neq i} \left[\ln{z_{ij}} - k - a_{1}\ln{d_{ij}} - a_{2}(1-\delta_{ij}) + \ln{P_{i}^{1-\sigma}} + \ln{P_{j}^{1-\sigma}}\right]^{2}
->$$
->
->subject to
->
->$$
->\quad P_{j}^{1-\sigma} = \sum_{i}P_{i}^{\sigma-1}\theta_{i}\exp{\\{a_{1}\ln{d_{ij}} + a_{2}(1-\delta_{ij})\\}}
->$$
->
->where $\ln{z_{ij}} \equiv \ln{\left(x_{ij}/y_{i}y_{j}\right)}$.
+***
 
 ### Estimation Strategy
 
