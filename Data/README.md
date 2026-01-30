@@ -16,7 +16,7 @@ $$
 \quad P_{j}^{1-\sigma} = \sum_{i}P_{i}^{\sigma-1}\theta_{i}\exp{\\{a_{1}\ln{d_{ij}} + a_{2}(1-\delta_{ij})\\}}
 $$
 
-Then, plug $ \\{P_{i} \\}$ back to the original gravity equation:
+Then, plug $\\{P_{i}\\}$ back to the original gravity equation:
 
 $$
 x_{ij} = \frac{y_{i}y_{j}}{y^{W}}\left(\frac{t_{ij}}{P_{i}P_{j}}\right)^{1-\sigma}
