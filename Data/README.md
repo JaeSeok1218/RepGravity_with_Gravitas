@@ -8,6 +8,14 @@ Since there is no publicly available dataset to replicate [Anderson and van Winc
 
 ## Data Construction
 
+### GDP
+
+Because the purpose of this practice is to learn from the paper, I also approximately match each region's GDP and as well as the GDP of both countries.
+
+<p align="center">
+<img src="images/Table_GDP.png" alt="Figure 1: GDP and Trade Network" width="400">
+</p>
+
 ### Trade flows
 
 The paper reports estimates of $a_{1}$ and $a_{2}$ for the two-country model, $-0.79$ and $-1.65$, respectively. Given these estimates, I solve the following market-clearing conditions for $\\{P_{i}\\}$.
@@ -35,6 +43,8 @@ x = x .* noise;
        width="300">
 </p>
 
+
+
 ### Distance
 
 To construct distance measures, I follow the paper and obtain approximate longitude and latitude coordinates for each state and province using Claude. I then calculate great-circle distances between regions based on these coordinates.
@@ -48,10 +58,3 @@ haversine = @(lat1, lon1, lat2, lon2) 2 * 6371 * asin(sqrt(...
 <img src="images/Table_Dist.png" alt="Figure 1: GDP and Trade Network" width="250">
 </p>
 
-### GDP
-
-Because the purpose of this practice is to learn from the paper, I also approximately match each region's GDP and as well as the GDP of both countries.
-
-<p align="center">
-<img src="images/Table_GDP.png" alt="Figure 1: GDP and Trade Network" width="400">
-</p>

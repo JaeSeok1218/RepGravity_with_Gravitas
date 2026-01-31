@@ -98,3 +98,10 @@ tic;
 elapsed = toc;
 ```
 
+# Result
+
+<p align="center">
+<img src="images/Table_result.png" alt="Figure 1: GDP and Trade Network" width="350">
+</p>
+
+>Note: Robust standard errors are in parentheses. True values are from the paper, and since my data set is constructed based on the estimates of the paper, I call them 'True Value'.
