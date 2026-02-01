@@ -55,8 +55,7 @@ Define ```data_opt``` as a data set containing 40 regions.
 ```matlab
 % Compute residuals
 function residuals = compute_residuals(params, data_opt, y, d, delta, n_regions)
-    % Compute residuals for NLSQ
-    
+
     a1 = params(1);
     a2 = params(2);
     
