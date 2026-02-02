@@ -7,10 +7,13 @@ From the general equilibrium, the paper implement the counterfactual analysis un
 According to _Appendix B_ in the paper, after the removal of the border, the quantities must be the same. Thus, we have
 
 $$
+
 \begin{equation}
 \frac{y_{i}^{1}}{p_{i}^{1}} = \frac{y_{i}^{0}}{p_{i}^{0}}
 \end{equation}
+
 $$
+
 where $0$ and $1$ refer the baseline and counterfactual equilibrium, respectively. If I understood correctly, without loss of generality, we could assume that $\beta_{i} = 1$ for all $i$. Then, we can back out $\\{p_{i}\\}$ from the multilateral resistance equations.
 
 $$
