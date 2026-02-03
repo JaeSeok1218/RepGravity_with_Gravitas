@@ -23,11 +23,10 @@ fprintf('Loaded trade data, results a_1 = %d and a_2 = %d \n\n', results.a1, res
 %% 2. Construct counterfactual setups
 % -------------------------------------------------------------------------
 
-
 fprintf('Step 1: Loading P_i^0 from estimation...\n');
 y0 = y(1:n_regions);
 d_data = d(1:n_regions, 1:n_regions);
-delta0 = delta(1:n_regions, 1:n_regions);
+delta0 = delta(1:n_regions, 1:n_regions)
 
 a1_hat = results.a1;
 a2_hat = results.a2;
@@ -43,12 +42,12 @@ P0 = T0.^(1/(1-sigma));
 fprintf('Step 2: Computing p_i^0...\n');
 p0 = back_out_p(a1_hat, a2_hat, delta0, y0, P0, d_data, n_regions, sigma);
 
-
-%% 4. Analyze the counterfactual model
-% -------------------------------------------------------------------------
+%% 4. Counterfactual Analysis
 
 % From estimation
 T_hat = results.T_hats(1:40);
+x0 = results.x0;
+z0 = results.z0;
 % Calculate P_{i}s (Calibrate sigma = 5)
 T_us = exp(mean(-log(T_hat(1:30))));
 T_ca = exp(mean(-log(T_hat(31:40))));
@@ -56,7 +55,32 @@ sd_T_us = std(T_hat(1:30));
 sd_T_ca = std(T_hat(31:40));
 
 fprintf('Step 3: Counterfactual: Borderless...\n');
-[y1, p1, P1] = counterf_solve(a1_hat, a2_hat, y0, p0, d_data, n_regions, sigma);
+[y1, p1, P1, T1] = counterf_solve(a1_hat, a2_hat, y0, p0, d_data, n_regions, sigma);
+
+% Compute Counterfactual Trade Flows Directly
+fprintf('Step 4: Compute Counterfactual trade...\n');
+
+x1 = zeros(n_regions, n_regions);
+
+for i = 1:n_regions
+    for j = 1:n_regions
+        % Trade cost without border
+        tau(i,j) = exp(a1_hat * log(d_data(i,j)));
+        
+        % Gravity equation
+        x1(i,j) = (y1(i) * y1(j) / sum(y1)) * ...
+                  (tau(i,j) / (T1(i) * T1(j)));
+    end
+end
+
+z1 = x1 ./ (y1 * y1');
+lnz1 = log(z1);
+
+
+%% 4. Result (1) : Average P_{i}^{sigma-1}
+% -------------------------------------------------------------------------
+
+fprintf('\n=== The Average Transform Results ===\n\n');
 
 % Calculate P_{i}s (Calibrate sigma = 5)
 T1_hat = P1.^(1-sigma);
@@ -96,9 +120,23 @@ fprintf('Std of T1:\n');
 fprintf('  std(T_ratio_us) = %.4f  [True: 0.03]\n', sd_T_ratio_us);
 fprintf('  std(T_ratio_ca) = %.4f  [True: 0.01]\n', sd_T_ratio_ca);
 
+%% 5. Result (2): Impact of the Border
 
-% ADD THIS DEBUG LINE
-fprintf('\n===== ABOUT TO PRINT GDP (size of y1: %d) =====\n', length(y1));
+fprintf('\n=== Breakdown the Border Effect ===\n\n');
+
+b_hat = exp(a2_hat);
+Mult_us_us = (T_ratio_us)*(T_ratio_us);
+Mult_ca_ca = (T_ratio_ca)*(T_ratio_ca);
+Mult_ca_us = (T_ratio_us)*(T_ratio_ca);
+
+fprintf('  b_border  = %.4f\n\n', b_hat);
+fprintf('  MR_us_us  = %.4f\n\n', Mult_us_us);
+fprintf('  MR_ca_ca  = %.4f\n\n', Mult_ca_ca);
+fprintf('  MR_ca_us  = %.4f\n\n', Mult_ca_us);
+
+
+%% 6. Result (3): GDP
+% -------------------------------------------------------------------------
 
 % GDP Changes
 fprintf('Nominal GDP Changes:\n');
@@ -118,7 +156,7 @@ fprintf('    Change: %.2f%%\n\n', 100*(sum(y1(31:40))/sum(y0(31:40)) - 1));
 
 %% Helper functions
 
-function [y1, p1, P1] = counterf_solve(a1_hat, a2_hat, y0, p0, d_data, n_regions, sigma)
+function [y1, p1, P1, T1] = counterf_solve(a1_hat, a2_hat, y0, p0, d_data, n_regions, sigma)
 
 % initial guess
 y1 = y0;

@@ -103,7 +103,7 @@ $$
 \end{align*}
 $$
 
-Accordingly, the paper reports three bilateral trades: US-US, CA-CA, and CA-US. Please see the paper for the entire interpretation. Here I just want to discuss the whole impact of the border:
+Accordingly, the paper reports three bilateral trade flows: US-US, CA-CA, and CA-US. Please see the paper for the full interpretation including the multi-country model; here I focus on the overall impact of the border:
 
 > US-US: 1.05
 >
@@ -111,4 +111,4 @@ Accordingly, the paper reports three bilateral trades: US-US, CA-CA, and CA-US. 
 >
 > US-CA: 0.41
 
-We can easily observe that trade within the US do not change much, while the CA-US border increases trade within Canada almost 4 times. Moreover, trade between CA-US falls by 59 percent.
+These results show that trade within the US changes very little, whereas the presence of the CA-US border increases intra-Canadian trade by nearly four times. Moreover, bilateral trade between Canada and the US declines by approximately 59 percent.
