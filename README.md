@@ -112,3 +112,11 @@ Accordingly, the paper reports three bilateral trade flows: US-US, CA-CA, and CA
 > US-CA: 0.41
 
 These results show that trade within the US changes very little, whereas the presence of the CA-US border increases intra-Canadian trade by nearly four times. Moreover, bilateral trade between Canada and the US declines by approximately 59 percent.
+
+### Implications 3
+
+Table 6 reports nominal GDP changes before and after the removal of the border.
+
+<p align="center">
+<img src="images/Table_GDPchange.png" alt="Table 5: GDP and Trade Network" width="400">
+</P>
