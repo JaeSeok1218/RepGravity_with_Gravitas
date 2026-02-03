@@ -99,7 +99,16 @@ Based on the result above, the paper decomposes the border effect on bilateral t
 
 $$
 \begin{align*}
-\ln{z_{ij}} - \ln{\widetilde{z}_{ij}} & = \ln{b_{ij}^{1-\sigma}} - \ln{\left(\frac{P_{i}}{\widetilde{P}_{i}}\right)^{1-\sigma}}- \ln{\left(\frac{P_{j}}{\widetilde{P}_{j}}\right)^{1-\sigma}} \\
-\frac{z_{ij}}{\widtilde{z}_{ij}} & = b_{ij}^{1-\sigma}
+\frac{x_{ij} \frac{y^{W}}{y_{i}y_{j}}}{\widetilde{x}_{ij} \frac{\widetilde{y}^{W}}{\widetilde{y}_{i}\widetilde{y}_{j}}} = \underbrace{b_{ij}^{1-\sigma}}_\text{BR impact}\underbrace{\left(\frac{P_{i}^{\sigma-1}}{\widetilde{P}_{i}^{\sigma-1}}\right)\left(\frac{P_{j}^{\sigma-1}}{\widetilde{P}_{j}^{\sigma-1}}\right)}_\text{MR impact}
 \end{align*}
 $$
+
+Accordingly, the paper reports three bilateral trades: US-US, CA-CA, and CA-US. Please see the paper for the entire interpretation. Here I just want to discuss the whole impact of the border:
+
+> US-US: 1.05
+>
+> CA-CA: 4.31
+>
+> US-CA: 0.41
+
+We can easily observe that trade within the US do not change much, while the CA-US border increases trade within Canada almost 4 times. Moreover, trade between CA-US falls by 59 percent.
