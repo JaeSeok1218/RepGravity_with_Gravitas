@@ -89,6 +89,7 @@ To compute the border effect, the paper implements a counterfactual analysis by 
 ### Implication 1: Multilateral Resistance
 
 The magnitude of the numbers reflects the fact that the border effects operating through $dt$ would lead larger impacts on multilateral resistance of a small country than that of a lager country.
+
 $$
 dP_{i} = \left(\frac{1}{2}-\theta_{i} + \frac{1}{2}\sum_{k}\theta_{k}^{2}\right)dt
 $$
