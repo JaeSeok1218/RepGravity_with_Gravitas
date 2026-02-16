@@ -76,7 +76,7 @@ where $\ln{z_{ij}} \equiv \ln{\left(x_{ij}/y_{i}y_{j}\right)}$.
 
 ## Counterfactual Analysis: Borderless
 
-To compute the border effect, the paper implements a counterfactual analysis by removing the Canada-US border (i.e., setting $\delta_{ij}=1$, for all $i,j$). The analysis strategy is described in detail [here](https://github.com/JaeSeok1218/Gravity_with_Gravitas/tree/main/Counterfactual).
+To compute the border effect, the paper implements a counterfactual analysis by removing the Canada-US border (i.e., setting $\delta_{ij}=1$, for all $i,j$). The analysis strategy is described in detail [here](https://github.com/JaeSeok1218/Gravity_with_Gravitas/tree/main/Counterfactual). The table reports the average of $P^{1-\sigma}$.
 
 ### Result
 
